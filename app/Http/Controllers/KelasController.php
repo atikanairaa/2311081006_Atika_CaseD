@@ -38,7 +38,7 @@ class KelasController extends Controller
             'nama_kursus'=> 'required|string|max:255',
             'kategori_kursus'=> 'required|string|max:255',
             'tanggal_mulai'=> 'required|date',
-            'tanggal_selesai'=> 'required|date',
+            'tanggal_selesai'=> 'required|date|after:tanggal_mulai',
             'status_pendaftaran' => 'required|in:terdaftar,aktif,selesai,dibatalkan'
         ]);
         Kelas::create($request->all());
@@ -75,7 +75,7 @@ class KelasController extends Controller
             'nama_kursus'=> 'required|string|max:255',
             'kategori_kursus'=> 'required|string|max:255',
             'tanggal_mulai'=> 'required|date',
-            'tanggal_selesai'=> 'required|date',
+            'tanggal_selesai'=> 'required|date|after:tanggal_mulai',
             'status_pendaftaran' => 'required|in:terdaftar,aktif,selesai,dibatalkan'
         ]
         );

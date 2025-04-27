@@ -16,13 +16,16 @@ class KelasFactory extends Factory
      */
     public function definition()
     {
+        $tanggalMulai = $this->faker->date(); // tanggal mulai random
+        $tanggalSelesai = $this->faker->dateTimeBetween($tanggalMulai, 'now')->format('Y-m-d'); // tanggal selesai maksimal saat ini
+       
         return [
             'nama_peserta' => $this->faker->name(),
             'email' => $this->faker->safeEmail(),
             'nama_kursus' => $this->faker->randomElement(['Pemrograman Web Dasar','Pelatihan Public Speaking','Desain Grafis','Belajar Bahasa Inggris']),
             'kategori_kursus' => $this->faker->randomElement(['Teknologi Informasi','Pengembangan Diri','Desain','Bahasa']),
-            'tanggal_mulai' => $this->faker->date(),
-            'tanggal_selesai' => $this->faker->date(),
+            'tanggal_mulai' => $tanggalMulai,
+            'tanggal_selesai' => $tanggalSelesai,
             'status_pendaftaran' => $this->faker->randomElement(['terdaftar', 'aktif', 'selesai', 'dibatalkan'])
         ];
     }

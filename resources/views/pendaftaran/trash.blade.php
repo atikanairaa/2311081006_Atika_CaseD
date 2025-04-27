@@ -51,7 +51,6 @@
                                                     <form action="{{ route('pendaftaran.forceDelete', $kelas->id) }}" method="POST"
                                                         onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                         @csrf
-                                                        @method('DELETE')
                                                         <button type="submit" class="btn btn-sm btn-danger">Hapus Permanen</button>
                                                     </form>
                                                 </div>

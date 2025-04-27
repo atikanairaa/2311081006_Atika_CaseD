@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <div class="pagination-container d-flex justify-content-center mt-3">
+    <div class="pagination-container d-flex justify-content-end">
         {{ $kelass->links('pagination::bootstrap-5') }}
     </div>
     <div class="card mt-3"><a href="{{ route('pendaftaran.trash') }}" class="btn btn-secondary me-2">Sampah</a></div>

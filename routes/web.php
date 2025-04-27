@@ -17,5 +17,5 @@ Route::delete('pendaftaran/{id}', [KelasController::class,'destroy'])-> name('pe
 Route::prefix('pendaftaran')->group(function () {
     Route::get('trash', [KelasController::class, 'trash'])->name('pendaftaran.trash');
     Route::post('{id}/restore', [KelasController::class, 'restore'])->name('pendaftaran.restore');
-    Route::delete('{id}/forceDelete', [KelasController::class, 'forceDelete'])->name('pendaftaran.forceDelete');
+    Route::post('{id}/forceDelete', [KelasController::class, 'forceDelete'])->name('pendaftaran.forceDelete');
 });
