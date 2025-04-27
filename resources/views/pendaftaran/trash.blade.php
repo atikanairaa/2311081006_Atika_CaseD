@@ -8,7 +8,6 @@
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h4>Daftar Sampah</h4>
                     </div>
-
                     <div class="card-body">
                         @if (session('success'))
                             <div class="alert alert-success">
@@ -66,9 +65,9 @@
                                 </tbody>
                             </table>
                         </div>
-                        <a href="{{ route('pendaftaran.index') }}" class="btn btn-dark">Kembali</a>
                     </div>
                 </div>
+                <a href="{{ route('pendaftaran.index') }}" class="btn btn-dark mt-4">Kembali</a>
             </div>
         </div>
     </div>

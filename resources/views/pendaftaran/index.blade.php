@@ -66,12 +66,13 @@
                             </table>
                         </div>
                     </div>
-                    <a href="{{ route('pendaftaran.trash') }}" class="btn btn-secondary me-2">Sampah</a>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <div class="pagination-container d-flex justify-content-center mt-4">
+    <div class="pagination-container d-flex justify-content-center mt-3">
         {{ $kelass->links('pagination::bootstrap-5') }}
     </div>
+    <div class="card mt-3"><a href="{{ route('pendaftaran.trash') }}" class="btn btn-secondary me-2">Sampah</a></div>
 @endsection
